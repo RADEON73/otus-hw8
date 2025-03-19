@@ -1,0 +1,24 @@
+<map id="HashCalculator.h" name="HashCalculator.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="181,5,313,31"/>
+<area shape="rect" id="Node000002" href="$ArgumentParser_8h.html" title="Заголовочный файл для класса ArgumentParser." alt="" coords="179,79,316,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,44,250,79,245,79,245,44"/>
+<area shape="rect" id="Node000006" href="$FileComparator_8h.html" title="Заголовочный файл для класса FileComparator." alt="" coords="30,225,163,251"/>
+<area shape="poly" id="edge12_Node000001_Node000006" title=" " alt="" coords="218,41,190,61,161,87,133,118,112,153,102,192,99,225,94,225,97,191,108,151,129,115,157,83,187,56,215,36"/>
+<area shape="rect" id="Node000009" href="$HashCalculator_8cpp.html" title=" " alt="" coords="341,79,487,104"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="288,34,388,76,386,81,286,38"/>
+<area shape="rect" id="Node000003" href="$ArgumentParser_8cpp.html" title=" " alt="" coords="333,152,485,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="287,107,383,149,381,154,285,112"/>
+<area shape="rect" id="Node000004" href="$FileCollector_8cpp.html" title=" " alt="" coords="239,225,368,251"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="259,116,301,224,296,226,254,118"/>
+<area shape="rect" id="Node000005" href="$FileCollector_8h.html" title="Заголовочный файл для класса FileCollector." alt="" coords="143,152,258,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="234,117,210,153,206,150,230,114"/>
+<area shape="poly" id="edge10_Node000002_Node000006" title=" " alt="" coords="198,111,164,129,133,154,121,171,112,191,101,226,96,224,107,189,116,169,129,150,161,125,196,107"/>
+<area shape="rect" id="Node000008" href="$main_8cpp.html" title=" " alt="" coords="178,299,261,324"/>
+<area shape="poly" id="edge11_Node000002_Node000008" title=" " alt="" coords="327,104,434,126,476,138,499,150,504,164,499,179,478,209,451,234,420,255,386,272,319,295,262,308,260,302,318,290,384,267,417,251,447,230,474,205,494,176,499,164,495,154,474,143,433,132,326,109"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="230,183,288,223,285,227,227,187"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="174,187,115,227,112,223,171,183"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="207,191,220,298,215,299,201,192"/>
+<area shape="rect" id="Node000007" href="$FileComparator_8cpp.html" title=" " alt="" coords="5,299,153,324"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="93,265,85,299,80,298,88,263"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="129,255,201,296,198,301,127,260"/>
+</map>

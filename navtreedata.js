@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "print_ip", "index.html", [
+  [ "HW9", "index.html", [
     [ "otus-hw8", "md_README.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

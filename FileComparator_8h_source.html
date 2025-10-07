@@ -159,7 +159,7 @@ $(document).ready(function(){initNavTree('FileComparator_8h_source.html',''); in
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classFileComparator.html#a168f96ef45c168e2cc771f6ca2278d8a">   75</a></span>    <a class="code hl_function" href="classFileComparator.html#a168f96ef45c168e2cc771f6ca2278d8a">FileComparator</a>(<a class="code hl_typedef" href="FileCollector_8h.html#a99223e3a88c583a6ffda9bff57eabdfc">FileGroups</a>&amp; files, <span class="keyword">const</span> <a class="code hl_struct" href="structArgumentParser_1_1ParserData.html">ArgumentParser::ParserData</a>&amp; data)</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        : files_(files), hashCalculator_(data.hashAlgorithm.get(), data.blockSize), blockSize_(data.blockSize)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        : files_(files), hashCalculator_(data.hashAlgorithm.get(), data.blockSize), blockSize_(data.blockSize), deleteflag(data.deleteflag)</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
 </div>
@@ -173,8 +173,9 @@ $(document).ready(function(){initNavTree('FileComparator_8h_source.html',''); in
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_class" href="classHashCalculator.html">HashCalculator</a> hashCalculator_; </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">size_t</span> blockSize_; </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    std::mutex outputMutex_; </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    std::mutex cout_mutex;  </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>};</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">bool</span> deleteflag{ <span class="keyword">false</span> };</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    std::mutex cout_mutex;  </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>};</div>
 </div>
 <div class="ttc" id="aArgumentParser_8h_html"><div class="ttname"><a href="ArgumentParser_8h.html">ArgumentParser.h</a></div><div class="ttdoc">Заголовочный файл для класса ArgumentParser.</div></div>
 <div class="ttc" id="aFileCollector_8h_html"><div class="ttname"><a href="FileCollector_8h.html">FileCollector.h</a></div><div class="ttdoc">Заголовочный файл для класса FileCollector.</div></div>
@@ -182,7 +183,7 @@ $(document).ready(function(){initNavTree('FileComparator_8h_source.html',''); in
 <div class="ttc" id="aHashCalculator_8h_html"><div class="ttname"><a href="HashCalculator_8h.html">HashCalculator.h</a></div></div>
 <div class="ttc" id="aclassFileComparator_html"><div class="ttname"><a href="classFileComparator.html">FileComparator</a></div><div class="ttdoc">Класс для сравнения файлов по их содержимому.</div><div class="ttdef"><b>Definition</b> FileComparator.h:68</div></div>
 <div class="ttc" id="aclassFileComparator_html_a168f96ef45c168e2cc771f6ca2278d8a"><div class="ttname"><a href="classFileComparator.html#a168f96ef45c168e2cc771f6ca2278d8a">FileComparator::FileComparator</a></div><div class="ttdeci">FileComparator(FileGroups &amp;files, const ArgumentParser::ParserData &amp;data)</div><div class="ttdoc">Конструктор класса FileComparator.</div><div class="ttdef"><b>Definition</b> FileComparator.h:75</div></div>
-<div class="ttc" id="aclassFileComparator_html_a814643e900350311905f76fd0b7fc669"><div class="ttname"><a href="classFileComparator.html#a814643e900350311905f76fd0b7fc669">FileComparator::compareGroups</a></div><div class="ttdeci">void compareGroups()</div><div class="ttdoc">Метод для сравнения групп файлов.</div><div class="ttdef"><b>Definition</b> FileComparator.cpp:45</div></div>
+<div class="ttc" id="aclassFileComparator_html_a814643e900350311905f76fd0b7fc669"><div class="ttname"><a href="classFileComparator.html#a814643e900350311905f76fd0b7fc669">FileComparator::compareGroups</a></div><div class="ttdeci">void compareGroups()</div><div class="ttdoc">Метод для сравнения групп файлов.</div><div class="ttdef"><b>Definition</b> FileComparator.cpp:47</div></div>
 <div class="ttc" id="aclassHashCalculator_html"><div class="ttname"><a href="classHashCalculator.html">HashCalculator</a></div><div class="ttdoc">Класс для расчета хэша данных с использованием заданного алгоритма.</div><div class="ttdef"><b>Definition</b> HashCalculator.h:38</div></div>
 <div class="ttc" id="astructArgumentParser_1_1ParserData_html"><div class="ttname"><a href="structArgumentParser_1_1ParserData.html">ArgumentParser::ParserData</a></div><div class="ttdoc">Структура для хранения данных, полученных из аргументов командной строки.</div><div class="ttdef"><b>Definition</b> ArgumentParser.h:25</div></div>
 <div class="ttc" id="astructFileInfo_html"><div class="ttname"><a href="structFileInfo.html">FileInfo</a></div><div class="ttdoc">Структура для хранения информации о файлах</div><div class="ttdef"><b>Definition</b> FileComparator.h:18</div></div>

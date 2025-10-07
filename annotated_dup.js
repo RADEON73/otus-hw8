@@ -4,6 +4,7 @@ var annotated_dup =
     [ "CRC32Hash", "classCRC32Hash.html", "classCRC32Hash" ],
     [ "FileCollector", "classFileCollector.html", "classFileCollector" ],
     [ "FileComparator", "classFileComparator.html", "classFileComparator" ],
+    [ "FileDeleter", "classFileDeleter.html", "classFileDeleter" ],
     [ "FileInfo", "structFileInfo.html", "structFileInfo" ],
     [ "HashAlgorithmFactory", "classHashAlgorithmFactory.html", null ],
     [ "HashCalculator", "classHashCalculator.html", "classHashCalculator" ],

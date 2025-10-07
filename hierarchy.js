@@ -3,6 +3,7 @@ var hierarchy =
     [ "ArgumentParser", "classArgumentParser.html", null ],
     [ "FileCollector", "classFileCollector.html", null ],
     [ "FileComparator", "classFileComparator.html", null ],
+    [ "FileDeleter", "classFileDeleter.html", null ],
     [ "FileInfo", "structFileInfo.html", null ],
     [ "HashAlgorithmFactory", "classHashAlgorithmFactory.html", null ],
     [ "HashCalculator", "classHashCalculator.html", null ],

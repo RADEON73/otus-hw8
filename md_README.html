@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('md_README.html',''); initResizable(); 
 <p>&ndash;min-size - Минимальный размер файла в байтах (по умолчанию 1).</p>
 <p>&ndash;block-size - Размер блока для чтения файлов в байтах (по умолчанию 1024).</p>
 <p>&ndash;hash - Алгоритм хэширования для сравнения файлов (по умолчанию crc32, доступные значения: crc32, md5).</p>
+<p>&ndash;delete - Удалять ли все дубликаты кроме первого в списке ( по умолчанию - false, доступные значения true/false</p>
 <p>Пример аргументов запуска: &ndash;directories /path/to/dir1 /path/to/dir2 &ndash;exclude /path/to/exclude &ndash;level 2 &ndash;masks .txt .log &ndash;min-size 1024 &ndash;block-size 4096 &ndash;hash md5 Этот пример запускает программу с указанием двух директорий для сканирования, исключает одну директорию, задает глубину сканирования 2, фильтрует файлы по маскам .txt и .log, устанавливает минимальный размер файла 1024 байта, размер блока 4096 байт и использует алгоритм хэширования MD5.</p>
 <p>ТЗ:</p>
 <p>bayan</p>

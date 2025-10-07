@@ -1,10 +1,12 @@
 #include "FileComparator.h"
+#include "FileDeleter.h"
 #include <iostream>
 #include <unordered_map>
 #include <vector>
 #include <string>
 #include <fstream>
 #include <future>
+
 
 /// Прозрачный хэшер для std::string
 struct TransparentStringHash
@@ -113,11 +115,26 @@ void FileComparator::compareGroup(const std::vector<std::string>& filePaths) {
 		hashToFilePaths[hashSequence].push_back(filePaths[i]);
 	}
 
+	for (auto& fileInfo : files) {
+		if (fileInfo.fileStream.is_open()) {
+			fileInfo.fileStream.close();
+		}
+	}
+
+	// Создаем FileDeleter если нужно удалять дубликаты
+	FileDeleter fileDeleter;
+
 	// Выводим результаты
 	std::scoped_lock<std::mutex> lock(outputMutex_);
 	for (const auto& [hashSequence, paths] : hashToFilePaths) {
 		for (const auto& path : paths)
 			std::cout << path << std::endl;
 		std::cout << std::endl; // Разделяем группы пустой строкой
+
+		// Если включено удаление и в группе больше одного файла
+		if (deleteflag && paths.size() > 1) {
+			FileDeleter fileDeleter;
+			fileDeleter.deleteDuplicates(paths);
+		}
 	}
 }

@@ -30,6 +30,7 @@ public:
 		size_t minFileSize; ///< Минимальный размер файла для обработки.
 		std::unique_ptr<IHashAlgorithm> hashAlgorithm; ///< Алгоритм хэширования.
 		size_t blockSize{ 1024 }; ///< Размер блока для чтения файлов.
+		bool deleteflag{ false };
 	};
 
 	/**

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.29)
 
 if (DEFINED ENV{USE_VCPKG_TOOLCHAIN} AND "$ENV{USE_VCPKG_TOOLCHAIN}" STREQUAL "1")
-    set(CMAKE_TOOLCHAIN_FILE "E:/vcpkg/scripts/buildsystems/vcpkg.cmake")
+    set(CMAKE_TOOLCHAIN_FILE "E:/_CommonData/vcpkg/scripts/buildsystems/vcpkg.cmake")
 endif()
 
 project(bayan VERSION 1.0.0)
@@ -16,6 +16,7 @@ ArgumentParser.cpp ArgumentParser.h
 FileCollector.cpp FileCollector.h
 FileComparator.cpp FileComparator.h
 HashCalculator.cpp HashCalculator.h
+FileDeleter.cpp FileDeleter.h
 )
 
 set_target_properties(main PROPERTIES

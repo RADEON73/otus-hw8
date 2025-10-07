@@ -73,7 +73,7 @@ public:
 	 * @param data Данные, полученные из аргументов командной строки.
 	 */
 	FileComparator(FileGroups& files, const ArgumentParser::ParserData& data)
-		: files_(files), hashCalculator_(data.hashAlgorithm.get(), data.blockSize), blockSize_(data.blockSize)
+		: files_(files), hashCalculator_(data.hashAlgorithm.get(), data.blockSize), blockSize_(data.blockSize), deleteflag(data.deleteflag)
 	{
 	}
 
@@ -93,5 +93,6 @@ private:
 	HashCalculator hashCalculator_; ///< Калькулятор хэшей.
 	size_t blockSize_; ///< Размер блока для чтения файлов.
 	std::mutex outputMutex_; ///< Мьютекс для синхронизации вывода.
+	bool deleteflag{ false };
 	std::mutex cout_mutex;  ///< Мьютекс для синхронизации вывода в консоль.
 };

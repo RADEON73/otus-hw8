@@ -23,6 +23,7 @@ ArgumentParser::PARSE_RES_CODE ArgumentParser::parse()
 		("min-size", po::value<size_t>()->default_value(1), "minimum file size, bytes - 1 [default]")
 		("block-size", po::value<size_t>()->default_value(1024), "block size, bytes - 1024 [default]")
 		("hash", po::value<std::string>()->default_value("crc32"), "hash algorithm (crc32 [default], md5)")
+		("delete", po::value<bool>()->default_value(false), "delete duplicates except of one from folder")
 		;
 
 	try {
@@ -69,6 +70,9 @@ ArgumentParser::PARSE_RES_CODE ArgumentParser::parse()
 
 	if (vm.count("block-size"))
 		data_.blockSize = vm["block-size"].as<size_t>();
+
+	if (vm.count("delete"))
+		data_.deleteflag = vm["delete"].as<bool>();
 
 	return PARSE_RES_CODE::OK;
 }
